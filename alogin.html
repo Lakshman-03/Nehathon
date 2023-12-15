@@ -1,0 +1,241 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+      
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden; 
+    margin: 0; 
+    background: linear-gradient(to right, #092635, #0f415a, #115170); 
+    background-size: 200% 100%;
+    animation: gradientAnimation 10s linear infinite alternate;
+}
+
+#login-container {
+    max-width: 400px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid #26363e;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(6, 1, 1, 0.1);
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+        #login-container > h2 {
+            color: #fff;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        .input-box input,
+        .input-box2 input {
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid green;
+            outline: none;
+            background: transparent;
+            padding: 5px;
+            color: #fff;
+            margin: 10px 0;
+             opacity: 0.9;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+        input:hover {
+    opacity: 1;
+    cursor: pointer;
+    scale: 105%;
+    color: #1b4242;
+} 
+input:not(:placeholder-shown) {
+    color: #ffffff;
+}
+
+        .input-box2{
+            margin-top: 20px;
+        }
+        button {
+            width: 50%;
+            padding: 10px;
+            height: 40px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            margin-top: 40px;
+            border-radius: 40px;
+            opacity: 0.9;
+            transition: 0.3s;
+            cursor: progress;
+        }
+        button:hover {
+    opacity: 1;
+    cursor: pointer;
+    scale: 105%;
+    color: #1b4242;
+}
+        button:disabled {
+            background-color: rgb(148, 139, 139);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <div class="input-box">
+            <input type="tel" id="Admin Id" placeholder="Admin Id" required>
+            <input type="Password" id="pwd" placeholder="Password">
+            <a href="./admin.html"><button id="a1"><b>login</b></button></a>
+    </div>
+    </div>
+
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden; 
+            margin: 0; 
+            background: linear-gradient(to right, #092635, #0f415a, #115170); 
+            background-size: 200% 100%;
+            animation: gradientAnimation 10s linear infinite alternate;
+        }
+
+        #login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: transparent;
+            border: 1px solid #26363e;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(6, 1, 1, 0.1);
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        #login-container > h2 {
+            color: #fff;
+        }
+
+        .input-box input,
+        .input-box2 input {
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid green;
+            outline: none;
+            background: transparent;
+            padding: 5px;
+            color: #fff;
+            margin: 10px 0;
+            opacity: 0.9;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:hover {
+            opacity: 1;
+            cursor: pointer;
+            scale: 105%;
+            color: #1b4242;
+        } 
+
+        input:not(:placeholder-shown) {
+            color: #ffffff;
+        }
+
+        .input-box2 {
+            margin-top: 20px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            height: 40px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            margin-top: 30px;
+            border-radius: 40px;
+            opacity: 0.9;
+            transition: 0.3s;
+            cursor: progress;
+        }
+
+        button:hover {
+            opacity: 1;
+            cursor: pointer;
+            scale: 105%;
+            color: #1b4242;
+        }
+
+        button:disabled {
+            background-color: rgb(148, 139, 139);
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <div class="input-box">
+            <input type="tel" id="StudentId" placeholder="Student Id" required>
+            <input type="Password" id="pwd" placeholder="Password">
+            <a href="./student.html"><button id="a1"><b>Login</b></button></a>
+        </div>
+        <p style="color: #fff; margin-top: 10px;">Don't have an account? <a href="./areg.html" onclick="showRegister()">Register</a></p>
+    </div>
+
+    <!-- Registration Section -->
+    <!-- <div id="register" style="display: none; text-align: center; color: #fff;">
+        <h2>Register</h2>
+      
+        <a href="./areg.html"><button id="registerBtn"><b>Register</b></button></a>
+    </div> -->
+
+    <!--<script>
+        function showRegister() {
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("register").style.display = "block";
+        }
+
+        // Your existing script here
+    </script>-->
+</body>
+</html>

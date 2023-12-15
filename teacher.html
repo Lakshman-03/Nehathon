@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Frames</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #092635, #0f415a, #115170);
+            background-size: 200% 100%;
+            animation: gradientAnimation 5s linear infinite alternate;
+        }
+
+        .container {
+            display: flex;
+            height: 60vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            flex: 1;
+            display: flex;
+            max-width: 300px;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px; /* Adjusted margin */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left {
+            background-color: #0a3d52;
+            height: 50vh;
+        }
+
+        .right {
+            background-color: rgb(38, 13, 115);
+            height: 50vh;
+        }
+
+        .bottom-left,
+        .bottom-right {
+            flex: 1;
+            display: flex;
+            max-width: 300px;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin: 20px; /* Adjusted margin */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-left {
+            background-color: #2e8b57;
+        }
+
+        .bottom-right {
+            background-color: rgb(1, 111, 111);
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .content > h2 {
+            margin-top: 50px;
+        }
+
+        .right > h2,
+        .left > h2,
+        .bottom-left > h2,
+        .bottom-right > h2 {
+            color: #ffffff;
+        }
+
+        #title {
+            text-align: center;
+            color: #ffffff;
+            padding: 20px 0;
+            margin-top: 25px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            margin-top: 10px;
+            width: 200px;
+            height: 60px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #s1 {
+            background-color: rgb(1, 111, 111);
+            color: #fff;
+        }
+
+        #a1 {
+            background-color: #2e8b57;
+            color: #fff;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">STUDENT</h1>
+    <div class="container">
+        <div class="card left">
+            <div class="content">
+                <h2>Profile</h2>
+                <img src="./img1.png" height="130px" width="140px">
+                <h3>Go to your profile.</h3>
+                <a href="student-profile.html" style="text-decoration: none"><button id="a1"><b>Go</b></button></a>
+            </div>
+        </div>
+        <div class="card right">
+            <div class="content">
+                <h2>View your certificates</h2>
+                <img src="./img2.png" height="130px" width="140px">
+                <h3>View my certificates.</h3>
+                <a href="slogin.html" style="text-decoration: none"><button id="s1"><b>Go</b></button></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bottom-left">
+            <div class="content">
+                <h2>Bottom Left</h2>
+                <!-- Add your content and button here -->
+            </div>
+        </div>
+        <div class="bottom-right">
+            <div class="content">
+                <h2>Bottom Right</h2>
+                <!-- Add your content and button here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

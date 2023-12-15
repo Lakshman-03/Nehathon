@@ -1,0 +1,146 @@
+/* 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #092635, #0f415a, #115170); 
+    background-size: 200% 100%;
+    animation: gradientAnimation 5s linear infinite alternate;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left {
+    background-color: #367588;
+    height: 50vh;
+   
+}
+.right {
+    background-color:  #088f8f;
+    height: 50vh;
+}
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.right > h2,
+.left > h2 {
+    color: #ffffff;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#s1 {
+    background-color: rgb(1, 111, 111);
+    color: #fff;
+}
+
+#a1 {
+    background-color: #2e8b57;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+ */
+
+ body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right top, #91e5b1, #67dfc6, #44d6da, #3ccbe9, #57bdef, #5dbef2, #63bef5, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: 200% 100%;
+    animation: gradientAnimation 5s linear infinite alternate;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.left {
+    background-image: linear-gradient(to right top, #0df7e8, #00e6fa, #13d3ff, #5ebefa, #86a8e7);
+    height: 50vh;
+   
+}
+.right {
+    background-image: linear-gradient(to right top, #5ffbf1, #41e9fd, #4ad5ff, #69bff8, #86a8e7);;
+    height: 50vh;
+}
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.right > h2,
+.left > h2 {
+    color: #ffffff;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    margin-top: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#s1 {
+    background-color: #123c69;
+    color: #fff;
+}
+
+#a1 {
+    background-color: #123c69;
+    color: #fff;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+

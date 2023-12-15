@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(to right top, #91e5b1, #67dfc6, #44d6da, #3ccbe9, #57bdef, #5dbef2, #63bef5, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+            background-size: 200% 100%;
+            animation: gradientAnimation 5s linear infinite alternate;
+        }
+
+        .card {
+            width: 600px;
+            margin: 20px auto;
+            background: linear-gradient(rgb(38, 175, 255), rgb(10, 204, 238), rgb(32, 221, 218));
+            background-color: rgb(230, 230, 230);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .details {
+            flex: 1;
+        }
+
+        .certificate-section {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .certificate-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .certificate-list {
+            max-height: 200px; 
+            overflow-y: auto;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid #464545;
+            border-radius: 30px;
+            background-color: #fff;
+        }
+
+        .search-box input {
+            width: 295px;
+            height: 25px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            outline: none;
+        }
+
+        #search-button {
+            border: 0;
+            border-radius: 8px;
+            margin-left: 100px;
+            width: 65px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: #1da1f2;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <!-- <div class="profile-section">
+            <img class="profile-picture" src="anime.png" alt="bruh">
+            <div class="details">
+                <h2>gojo</h2>
+                <p>Email: suguru123@gmail.com</p>
+                <p>Department: CSE</p>
+                <p>Section: A/C</p>
+            </div>
+        </div> -->
+        <div class="profile-section">
+            <img class="profile-picture" src="anime.png" alt="bruh">
+            <div class="details">
+                <h2 id="profile-name"></h2>
+                <p id="profile-email"></p>
+                <p id="profile-department"></p>
+                <p id="profile-section"></p>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search certificates..." />
+            <button id="search-button" onclick="searchCertificates()">Search</button>
+        </div>
+        <div class="certificate-section">
+            <h3>Certificates</h3>
+            <div class="certificate-list">
+                <!-- <ul>
+                    <img class="certificate-image" src="./img1.png" alt="Certificate 1">
+                </ul>
+                <ul>
+                    <img class="certificate-image" src="./img2.png" alt="Certificate 2">
+                </ul>
+                <ul>
+                    <img class="certificate-image" src="./images/gojo.png" alt="Certificate 3">
+                </ul> -->
+                
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+        function searchCertificates() {
+            var searchInput = document.getElementById('search').value.toLowerCase();
+            var certificateImages = document.querySelectorAll('.certificate-image');
+
+            certificateImages.forEach(function (image) {
+                var altText = image.alt.toLowerCase();
+                var isVisible = altText.includes(searchInput);
+                image.style.display = isVisible ? 'block' : 'none';
+            });
+        }
+    </script> -->
+    <script>
+        // Simulated data (replace this with actual data fetching logic)
+        const userData = {
+            name: 'Gojo',
+            email: 'suguru123@gmail.com',
+            department: 'CSE',
+            section: 'A/C',
+        };
+    
+        const certificatesData = [
+            { name: 'Certificate 1 - DRAWING', imageUrl: './img1.png' },
+            { name: 'Certificate 2 - FULL STACK', imageUrl: './img2.png' },
+            { name: 'Certificate 3 - ANIME WATCHER', imageUrl: './images/gojo.png' },
+        ];
+    
+        // Function to populate user data
+        function populateUserData() {
+            // document.getElementById('profile-name').innerText = userData.name;
+            // document.getElementById('profile-email').innerText = `Email: ${userData.email}`;
+            // document.getElementById('profile-department').innerText = `Department: ${userData.department}`;
+            // document.getElementById('profile-section').innerText = `Section: ${userData.section}`;
+            document.getElementById('profile-name').innerText = userData.name;
+document.getElementById('profile-email').innerText = `Email: ${userData.email}`;
+document.getElementById('profile-department').innerText = `Department: ${userData.department}`;
+document.getElementById('profile-section').innerText = `Section: ${userData.section}`;
+
+        }
+    
+        // Function to populate certificates data
+        function populateCertificates() {
+            const certificateList = document.querySelector('.certificate-list');
+    
+            certificatesData.forEach((certificate) => {
+                const listItem = document.createElement('ul');
+                listItem.innerHTML = `
+                    <h4>${certificate.name}</h4>
+                    <img class="certificate-image" src="${certificate.imageUrl}" alt="${certificate.name}">
+                `;
+                certificateList.appendChild(listItem);
+            });
+        }
+    
+        // Initial data population
+        populateUserData();
+        populateCertificates();
+    
+        // Function to search certificates
+        function searchCertificates() {
+            var searchInput = document.getElementById('search').value.toLowerCase();
+            var certificateImages = document.querySelectorAll('.certificate-image');
+    
+            certificateImages.forEach(function (image) {
+                var altText = image.alt.toLowerCase();
+                var isVisible = altText.includes(searchInput);
+                image.parentNode.style.display = isVisible ? 'block' : 'none';
+            });
+        }
+    </script>
+    
+</body>
+
+</html>
